@@ -13,20 +13,33 @@
   <!-- script -->
   <script src="//unpkg.com/alpinejs" defer></script>
   <script src="./src/js/lib/fontawesome.js"></script>
+  <script src="./src/js/lib/jquery.min.js"></script>
+  <script src="./src/js/script.js"></script>
 </head>
 
 <body class="bg-gray-100">
   <header class="flex sticky top-0 px-3.5 py-2 bg-gray-200 z-50">
     <a href="#"><img class="max-w-md" src="./src/img/img_logo.svg" alt=""></a>
-    <div class="ml-auto my-auto">
+    <div class="ml-auto my-auto xl:block hidden">
       <a href="#"
-        class="ml-auto border-2 border-primary text-primary hover:bg-primary hover:text-white my-3 rounded py-1.5 px-5 font-semibold">Login</a>
+        class="border-2 border-primary text-primary hover:bg-primary hover:text-white my-3 rounded py-1.5 px-5 font-semibold">Login</a>
       <a href="#"
-        class="ml-auto border-2 border-primary text-primary hover:bg-primary hover:text-white my-3 rounded py-1.5 px-5 font-semibold">Register</a>
+        class="border-2 border-primary text-primary hover:bg-primary hover:text-white my-3 rounded py-1.5 px-5 font-semibold">Register</a>
     </div>
+    <p class="menu-trigger ml-auto xl:hidden inline-block w-7 my-auto cursor-pointer">
+      <span class="mb-2 block border-b-2 border-black w-full transition delay-300"></span>
+      <span class="mb-2 block border-b-2 border-black w-full transition delay-300"></span>
+      <span class="mb-2 block border-b-2 border-black w-full transition delay-300"></span>
+    </p>
   </header>
-  <nav class="container py-3">
-    <ul class="flex -mx-3 overflow-x-auto justify-between">
+  <nav id="nav-bar" class="container py-3 xl:static fixed xl:top-20 bg-gray-100 transition delay-700 xl:left-0 -left-full">
+    <div class="mx-auto my-auto xl:hidden flex justify-between">
+      <a href="#"
+        class="border-2 border-primary text-primary hover:bg-primary hover:text-white my-3 rounded py-1.5 w-1/2 mx-4 font-semibold text-center">Login</a>
+      <a href="#"
+        class="border-2 border-primary text-primary hover:bg-primary hover:text-white my-3 rounded py-1.5 w-1/2 mx-4 font-semibold text-center">Register</a>
+    </div>
+    <ul class="xl:flex xl:pl-0 pl-3 -mx-3 overflow-x-auto justify-between">
       <li>
         <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap"><i class="fas fa-home"></i></a>
       </li>
@@ -36,7 +49,7 @@
       <li>
         <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap">For Rent</a>
       </li>
-      <li class="border-r-2 border-gray-300">
+      <li class="xl:border-r-2 xl:border-gray-300">
         <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap">New Homes</a>
       </li>
       <li>
@@ -44,31 +57,34 @@
       </li>
       <li>
         <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap">Property Guide</a>
-      </li>      
+      </li>
       <li>
         <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap">Art of Living</a>
-      </li>      
+      </li>
       <li>
         <!-- Dropdown -->
         <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap">Wanted Properties</a>
-      </li>      
+      </li>
       <li>
         <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap">News</a>
       </li>
       <li>
         <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap">Agents</a>
       </li>
-      <li class="border-r-2 border-gray-300">
+      <li class="xl:border-r-2 xl:border-gray-300">
         <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap">Careers</a>
-      </li>      
-      <li class="border-r-2 border-gray-300">
-        <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap"><i class="far fa-calendar-alt"></i> Bookings</a>
       </li>
-      <li class="border-r-2 border-gray-300">
-        <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap"><i class="fab fa-searchengin"></i> Property ID</a>
+      <li class="xl:border-r-2 xl:border-gray-300">
+        <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap"><i
+            class="far fa-calendar-alt"></i> Bookings</a>
       </li>
-      <li class="border-r-2 border-gray-300">
-        <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap"><i class="fas fa-file-signature"></i> Contact Sales</a>
+      <li class="xl:border-r-2 xl:border-gray-300">
+        <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap"><i
+            class="fab fa-searchengin"></i> Property ID</a>
+      </li>
+      <li class="xl:border-r-2 xl:border-gray-300">
+        <a href="#" class="hover:text-primary mx-3 uppercase text-xs whitespace-nowrap"><i
+            class="fas fa-file-signature"></i> Contact Sales</a>
       </li>
     </ul>
   </nav>
