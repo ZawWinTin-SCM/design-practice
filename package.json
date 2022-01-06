@@ -1,0 +1,16 @@
+{
+  "name": "tailwindsample",
+  "author": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i src/css/style.css -o dist/tailwind.css",
+    "watch": "tailwindcss -i src/css/style.css -o dist/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.1",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^2.0.0"
+  }
+}
